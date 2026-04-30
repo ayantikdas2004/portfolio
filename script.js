@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+      // e.preventDefault(); // Commented out to allow Netlify form submission
       const submitBtn = contactForm.querySelector('.form-submit');
       const btnText = submitBtn.querySelector('span');
       const originalText = btnText.textContent;

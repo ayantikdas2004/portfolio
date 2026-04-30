@@ -495,6 +495,8 @@
           </div>
 
           <form class="contact-form glass-card reveal-right" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="John Doe" required />
@@ -534,5 +536,11 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- Netlify Form Detection (Hidden Backup) -->
+<form name="contact" method="POST" data-netlify="true" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+</form>
 </body>
 </html>
