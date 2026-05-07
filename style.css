@@ -171,6 +171,7 @@ input, textarea { font-family: inherit; }
   font-size: 1rem;
   cursor: none;
   transition: var(--transition);
+  color: var(--accent)
 }
 .theme-toggle:hover { background: var(--surface-hover); border-color: var(--accent); }
 .nav-cta {
@@ -201,7 +202,10 @@ input, textarea { font-family: inherit; }
 
 /* ===== MOBILE MENU ===== */
 .mobile-menu {
-  position: fixed; top: var(--nav-h); left: 0; right: 0;
+  position: fixed; 
+  /* top: var(--nav-h); */
+  left: 0; 
+  right: 0;
   background: rgba(8,11,18,0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -211,7 +215,9 @@ input, textarea { font-family: inherit; }
   transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
   border-bottom: 1px solid var(--border);
 }
-.mobile-menu.open { transform: translateY(0); }
+.mobile-menu.open { 
+  transform: translateY(62px);
+}
 .mobile-menu ul { display: flex; flex-direction: column; gap: 1.5rem; }
 .mobile-link {
   font-size: 1.5rem; font-weight: 700; color: var(--text-primary);
